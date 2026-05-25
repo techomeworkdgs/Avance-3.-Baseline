@@ -1,0 +1,45 @@
+{
+  "project": "Avance 3 — Baseline DoS Prediction",
+  "team": "Equipo 6",
+  "plant": "LY78",
+  "target": "plant_dos",
+  "features": [
+    "dos_lag1",
+    "dos_lag7",
+    "dos_delta1",
+    "dos_rolling_mean7",
+    "dos_rolling_std7",
+    "stock_lag1",
+    "log_stock_lag1",
+    "quality_stock_lag1",
+    "access_stock_lag1",
+    "safety_stock",
+    "stock_safety_ratio",
+    "demand_lag1",
+    "day_of_week",
+    "is_weekend",
+    "access_plant_ratio_lag1",
+    "concepto_LDL",
+    "concepto_NAFTA",
+    "concepto_Obsolete",
+    "concepto_Otro"
+  ],
+  "n_features": 19,
+  "seed": 42,
+  "best_ridge_alpha": 0.01,
+  "temporal_split": {
+    "train": "2026-03-15 a 2026-04-30",
+    "val": "2026-05-01 a 2026-05-14",
+    "test": "2026-05-15 a 2026-05-24"
+  },
+  "pipeline_steps": [
+    "SimpleImputer(median)",
+    "StandardScaler",
+    "Model"
+  ],
+  "metrics_test_ridge": {
+    "MAE": 1.1508005970284916,
+    "RMSE": 3.747695818430805,
+    "R2": 0.9869938530599163
+  }
+}
