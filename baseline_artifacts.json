@@ -1,0 +1,41 @@
+{
+  "SEED": 42,
+  "features": [
+    "dos_lag1",
+    "dos_lag7",
+    "dos_delta1",
+    "dos_rolling_mean7",
+    "dos_rolling_std7",
+    "stock_lag1",
+    "log_stock_lag1",
+    "quality_stock_lag1",
+    "access_stock_lag1",
+    "safety_stock",
+    "stock_safety_ratio",
+    "demand_lag1",
+    "day_of_week",
+    "is_weekend",
+    "access_plant_ratio_lag1",
+    "concepto_LDL",
+    "concepto_NAFTA",
+    "concepto_Obsolete",
+    "concepto_Otro"
+  ],
+  "target": "plant_dos",
+  "best_alpha": 0.01,
+  "split": {
+    "train_end": "2026-04-30",
+    "val_end": "2026-05-14",
+    "train_size": 616283,
+    "val_size": 164081,
+    "test_size": 122871
+  },
+  "metrics": {
+    "dummy_val_mae": 17.237057307061754,
+    "ridge_val_mae": 0.7354081152839623,
+    "ridge_val_r2": 0.9906132416876634,
+    "ridge_test_mae": 1.1508005970284916,
+    "ridge_test_r2": 0.9869938530599163,
+    "lift_mae_pct": 95.73356343728882
+  }
+}
